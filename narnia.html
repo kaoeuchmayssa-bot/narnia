@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les Chroniques de Narnia - Le Royaume Enchanté</title>
+    <link rel="stylesheet" href="narnia1.css" />
+  </head>
+
+  <body>
+    <div class="snow"></div>
+
+    <header>
+      <h1>🦁 Les Chroniques de Narnia</h1>
+      <p>Le Royaume Enchanté</p>
+    </header>
+
+    <main class="game-container">
+      <section id="story">
+        <div class="image-box">
+          <div id="sceneEmoji">🚪</div>
+        </div>
+
+        <h2 id="title">L'armoire mystérieuse</h2>
+
+        <p id="text">
+          Tu explores une vieille maison lorsqu'une étrange armoire attire ton
+          attention. Tu l'ouvres... et derrière les manteaux se cache un passage
+          couvert de neige. Une lumière mystérieuse brille au loin.
+        </p>
+
+        <div id="choices" class="choices">
+          <button onclick="choose(1)">❄️ Entrer dans le passage</button>
+          <button onclick="choose(2)">🚪 Retourner dans la maison</button>
+        </div>
+      </section>
+
+      <aside class="stats">
+        <h3>🎮 Ton aventure</h3>
+        <p>⭐ Score : <span id="score">0</span></p>
+        <p>❤️ Vie : <span id="health">100</span></p>
+        <p>🗝️ Objets : <span id="items">Aucun</span></p>
+
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+      </aside>
+    </main>
+
+    <div id="gameOver" class="modal hidden">
+      <div class="modal-content">
+        <h2 id="endTitle">Fin de l'aventure</h2>
+        <p id="endText"></p>
+        <p>🏆 Score final : <strong id="finalScore">0</strong></p>
+        <button onclick="restart()">🔄 Recommencer</button>
+      </div>
+    </div>
+
+    <script src=".narnia2.js"></script>
+  </body>
+</html>
